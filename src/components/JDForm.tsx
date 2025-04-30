@@ -58,9 +58,9 @@ const JDForm = () => {
       filter: true
     },
     { 
-      headerName: "Applicable Candidates", 
+      headerName: "Candidates", 
       field: "applicableCandidates", 
-      flex: 1,
+      flex: 0.5,
       valueFormatter: (params) => params.value?.length || 0,
       sortable: true
     },
@@ -76,20 +76,21 @@ const JDForm = () => {
           height: '100%'
         }}>
           <Button
-            variant="outlined"
+            variant="contained"
             size="small"
             sx={{
-              borderRadius: 1,
+              borderRadius: 2,
               textTransform: 'none',
               minWidth: '80px',
+              height: '28px',
               fontSize: '0.75rem',
               padding: '4px 12px',
-              color: 'primary.main',
-              borderColor: 'primary.main',
+              backgroundColor: 'primary.main',
+              color: 'white',
+              boxShadow: 'none',
               '&:hover': {
-                backgroundColor: 'primary.main',
-                color: 'white',
-                borderColor: 'primary.main',
+                backgroundColor: 'primary.dark',
+                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
               },
               transition: 'all 0.2s ease-in-out',
             }}
